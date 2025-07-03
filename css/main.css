@@ -1,19 +1,119 @@
 @charset "utf-8";
 @import url(font.css);
 @import url(res.css);
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-ul,li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
-a{
-    display: block;
-    color: #333;
-    text-decoration: none;
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
 }
+html,
 body {
-  font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+}
+/* 전체 레이아웃 */
+.wrap {
+  width: 100%;
+}
+.inner {
+  width: 1300px;
+  margin: 0 auto;
+  /* background: rgb(255, 222, 227); */
+}
+/* 헤더 */
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  height: 86px;
+  line-height: 86px;
+  /* background: skyblue; */
+}
+.logo img {
+  vertical-align: middle;
+}
+.header_top_right {
+  display: flex;
+  gap: 14px;
+}
+.header_top_right a {
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 21px 0 0 0;
+}
+/* 메뉴 */
+nav {
+  height: 56px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: rgb(248, 248, 144);/ */
+}
+nav .gnb {
+  display: flex;
+  gap: 30px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+nav .gnb li a,
+.header_top_right a {
+  color: #1c1d1f;
+}
+nav .gnb li:first-child a {
+  color: #ed1d24;
+}
+.depth2 {
+  display: none;
+}
+.front_bar::before {
+  content: "|";
+  font-style: normal;
+  margin-right: 30px;
+  font-weight: 100;
+}
+nav .util_wrap {
+  width: 100px;
+  height: 20px;
+  display: flex;
+  gap: 20px;
+}
+nav .util_wrap a {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .util_wrap a .search {
+  display: block;
+  /* position: relative; */
+  width: 100%;
+  height: 16px;
+  background: url(../images/icon/search_icon.png) no-repeat;
+  background-size: contain;
+}
+nav .util_wrap a .heart {
+  display: block;
+  /* position: relative; */
+  width: 100%;
+  height: 16px;
+  background: url(../images/icon/love_icon.png) no-repeat;
+  background-size: contain;
+}
+nav .util_wrap a .cart {
+  display: block;
+  /* position: relative; */
+  width: 100%;
+  height: 16px;
+  background: url(../images/icon/cart_icon.png) no-repeat;
+  background-size: contain;
 }
