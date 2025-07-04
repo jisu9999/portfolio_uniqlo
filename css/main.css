@@ -117,3 +117,30 @@ nav .util_wrap a .cart {
   background: url(../images/icon/cart_icon.png) no-repeat;
   background-size: contain;
 }
+/* 메인 슬라이드 */
+swiper-container {
+  width: 100%;
+  height: calc(100vh-142px);
+  /* position: relative; */
+}
+
+swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+swiper-slide a {
+  width: 100%;
+  height: 100%;
+}
+swiper-slide a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
