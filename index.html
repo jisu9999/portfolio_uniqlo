@@ -18,9 +18,11 @@
     <meta property="og:type" content="website" />
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/style.js"></script>
     <!-- favicon -->
     <link rel="icon" href="images/icon/uniqlo_favicon.png" />
     <title>uniqlo 유니클로</title>
@@ -123,39 +125,75 @@
         </header>
       </div>
       <!-- 메인 슬라이드 -->
-      <div class="main">
-        <swiper-container class="mySwiper wide-swiper">
-          <swiper-slide>
-            <a href="#;">
-              <img src="images/visual_slide/visual_slide01.png" alt="비주얼 슬라이드01" />
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#;" class="swiper-img" style="background-image: url('images/visual_slide/visual_slide01.png')">
+              <div class="jwanderson_box text_wrap">
+                <div class="jwlogo">
+                  <img src="images/label/jwanderson.png" alt="jwanderson 로고" />
+                </div>
+                <div class="visual_desc_box">
+                  <p class="visual_title">스트레이트 진</p>
+                  <div class="visual_desc">
+                    <p>뒷면의 포켓에 JW ANDERSON 로고가</p>
+                    <p>디테일을 더하는 스트레이트 실루엣의 진</p>
+                  </div>
+                </div>
+              </div>
             </a>
-          </swiper-slide>
-          <swiper-slide>
-            <a href="#;">
-              <img src="images/visual_slide/visual_slide02.png" alt="비주얼 슬라이드02" />
+          </div>
+          <div class="swiper-slide">
+            <a href="#;" class="swiper-img" style="background-image: url('images/visual_slide/visual_slide02.png')">
+              <div class="airism_box text_wrap">
+                <div class="airism_logo">
+                  <img src="images/label/airism.png" alt="airism 로고" />
+                </div>
+                <div class="airism_desc">
+                  <p class="visual_title">NEW COLOR!</p>
+                  <p class="visual_title">에어리즘 코튼 피케 폴로셔츠</p>
+                  <div class="visual_desc">
+                    <p>자연스러운 신축성으로 편안한</p>
+                    <p>착용감의 베이직 폴로셔츠입니다</p>
+                  </div>
+                </div>
+              </div>
             </a>
-          </swiper-slide>
-          <swiper-slide>
-            <a href="#;">
-              <img src="images/visual_slide/visual_slide03.png" alt="비주얼 슬라이드03" />
+          </div>
+          <div class="swiper-slide">
+            <a href="#;" class="swiper-img" style="background-image: url('images/visual_slide/visual_slide03.png')">
+              <div class="airism_box text_wrap">
+                <div class="airism_logo">
+                  <img src="images/label/airism.png" alt="airism 로고" />
+                </div>
+                <div class="visual_desc_box">
+                  <p class="visual_title" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)">
+                    오늘의 땀에 에어리즘으로 답하다
+                  </p>
+                  <div class="visual_desc" style="text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35)">
+                    <p>땀을 빠르게 흡수하고</p>
+                    <p>건조하는 쾌적 테크놀로지</p>
+                  </div>
+                </div>
+              </div>
             </a>
-          </swiper-slide>
-          <swiper-slide>
+          </div>
+          <div class="swiper-slide">
             <a href="#;">
-              <img src="images/visual_slide/visual_slide04.png" alt="비주얼 슬라이드04" />
+              <img src="images/visual_slide/visual_slide04.png" alt="비주얼 슬라이드 이미지04" />
             </a>
-          </swiper-slide>
-          <swiper-slide>
+          </div>
+          <div class="swiper-slide">
             <a href="#;">
-              <img src="images/visual_slide/visual_slide05.png" alt="비주얼 슬라이드05" />
+              <img src="images/visual_slide/visual_slide05.png" alt="비주얼 슬라이드 이미지05" />
             </a>
-          </swiper-slide>
-          <swiper-slide>
+          </div>
+          <div class="swiper-slide">
             <a href="#;">
-              <img src="images/visual_slide/visual_slide06.png" alt="비주얼 슬라이드06" />
+              <img src="images/visual_slide/visual_slide06.png" alt="비주얼 슬라이드 이미지06" />
             </a>
-          </swiper-slide>
-        </swiper-container>
+          </div>
+        </div>
       </div>
     </div>
   </body>

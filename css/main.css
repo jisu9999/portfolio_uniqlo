@@ -17,6 +17,9 @@ a {
 }
 html,
 body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
   font-family: "Pretendard", sans-serif;
   font-size: 10px;
 }
@@ -111,36 +114,78 @@ nav .util_wrap a .heart {
 }
 nav .util_wrap a .cart {
   display: block;
-  /* position: relative; */
   width: 100%;
   height: 16px;
   background: url(../images/icon/cart_icon.png) no-repeat;
   background-size: contain;
 }
-/* 메인 슬라이드 */
-swiper-container {
+/* visual_slide */
+.swiper {
   width: 100%;
-  height: calc(100vh-142px);
-  /* position: relative; */
+  height: calc(100% - 142px);
+  overflow-x: hidden;
 }
-
-swiper-slide {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 18px;
-  background: #444;
+.swiper-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-swiper-slide a {
-  width: 100%;
-  height: 100%;
-}
-swiper-slide a img {
+.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  min-width: 100%;
+}
+/* visual_slide_01 */
+.text_wrap {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.swiper-slide .jwanderson_box .jwlogo {
+  width: 71px;
+  height: 30px;
+  margin: auto;
+}
+.swiper-slide .jwanderson_box .jwlogo img {
+  width: 100%;
+  object-fit: cover;
+}
+.visual_desc_box {
+  margin-top: 20px;
+  color: #fff;
+}
+.visual_title {
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.visual_desc {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 25px;
+  line-height: 1.5;
+}
+/* visual_slide_02 */
+.swiper-slide .airism_box .airism_logo {
+  width: 71px;
+  height: 24px;
+  margin: auto;
+}
+.swiper-slide .airism_box .airism_logo img {
+  width: 100%;
+  object-fit: cover;
+}
+.swiper-slide .airism_box .airism_desc {
+  margin-top: 15px;
+  color: #fff;
 }
