@@ -176,16 +176,161 @@ nav .util_wrap a .cart {
   line-height: 1.5;
 }
 /* visual_slide_02 */
+.swiper-slide .airism_shirt_box {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.swiper-slide .airism_shirt_box .airism_logo {
+  width: 71px;
+  height: 24px;
+  margin: auto;
+}
+.swiper-slide .airism_shirt_box .airism_logo img {
+  width: 100%;
+  object-fit: cover;
+}
+.swiper-slide .airism_shirt_box .airism_desc {
+  margin-top: 15px;
+  color: #fff;
+}
+/* visual_slide_03 */
 .swiper-slide .airism_box .airism_logo {
   width: 71px;
   height: 24px;
   margin: auto;
 }
-.swiper-slide .airism_box .airism_logo img {
+/* visual_slide_04 */
+.swiper-slide .uniqlo_u_box .uniqlo_u_logo {
+  width: 71px;
+  height: 32px;
+  margin: auto;
+}
+.swiper-slide .uniqlo_u_box .uniqlo_u_logo img {
   width: 100%;
   object-fit: cover;
 }
-.swiper-slide .airism_box .airism_desc {
-  margin-top: 15px;
-  color: #fff;
+/* visual_slide_05 */
+.swiper-slide .toystory_box .ut_logo {
+  width: 42px;
+  height: 32px;
+  margin: auto;
+}
+.swiper-slide .toystory_box .ut_logo img {
+  width: 100%;
+  object-fit: cover;
+}
+/* best_section */
+.best_wrap {
+  margin-top: 90px;
+}
+.best_wrap .best_title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #1c1d1f;
+  margin-bottom: 20px;
+}
+.best_wrap .best_category {
+  display: flex;
+  gap: 4.2rem;
+  /* width: 346px; */
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.btnstyle_none {
+  border: none;
+  background: #fff;
+}
+.best_wrap .best_category li a {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #9fa4a8;
+  text-align: center;
+}
+.best_wrap .best_category li + li a::before {
+  content: "";
+  border: 1px solid #aaa;
+}
+.best_wrap .best_container {
+  width: 100%;
+  height: 1086px;
+  margin-top: 20px;
+  background: rgb(239, 205, 205);
+}
+.best_wrap .best_container .best_section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 33px;
+}
+.best_wrap .best_container .best_section_bottom{
+  margin-top: 55px;
+}
+.best_wrap .best_container .best_section .best_box {
+  width: 300px;
+  height: 506px;
+  /* border: 1px solid; */
+}
+.best_wrap .best_container .best_section .best_box .best_thumb {
+  width: 300px;
+  height: 400px;
+}
+.best_wrap .best_container .best_section .best_box .best_thumb a img {
+  width: 100%;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap {
+  position: relative;
+  width: 300px;
+  height: 90px;
+  /* background: pink; */
+  margin-top: 16px;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .heart::after {
+  content: "";
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  background: url(../images/icon/love_icon.png) no-repeat center / contain;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .main_desc .sub_detail {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #73787e;
+  margin-bottom: 4px;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .main_desc .item_title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1c1d1f;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc {
+  margin-top: 12px;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1c1d1f;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_review_wrap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 5px;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_review_wrap .review_star::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: url(../images/icon/review_icon.png) no-repeat center;
+}
+.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_review_wrap .best_review_score,
+.best_review_num {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #9fa4a8;
 }
