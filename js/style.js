@@ -17,7 +17,7 @@ window.onload = function () {
     slidesPerView: 3, // 한 화면에 3개
     slidesPerGroup: 3, // 클릭, 터치 시 3개씩 넘어감
     spaceBetween: 35,
-    loop: true,
+    loop: false,
     simulateTouch: true, // 드래그 허용 (기본 true지만 명시 추천)
     grabCursor: true, // 마우스 커서 변경 (UX 향상용)
     pagination: {
@@ -71,9 +71,67 @@ window.onload = function () {
   });
 
   // new_section swiper
-  var swiper = new Swiper(".newSwiper", {
-      slidesPerView: 4,
-      spaceBetween: -1,
+  var swiper3 = new Swiper(".newSwiper", {
+    slidesPerView: 4,
+    slidesPerGroup: 4, // 클릭, 터치 시 4개씩 넘어감
+    spaceBetween: -1,
+    loop: false,
+    simulateTouch: true, // 드래그 허용 (기본 true지만 명시 추천)
+    pagination: {
+      el: ".newSwiper-pagination",
+      clickable: true, // dot 클릭으로 이동 가능
+      renderBullet: function (index, className) {
+        // dot 2개만 만들기
+        if (index > 1) return ""; // index: 0,1까지만
+        return `<span class="${className}">
+        <img src="images/icon/dot2.png" alt="dot${index + 1}" />
+        </span>`;
+      },
+    },
+  });
+
+ // ✅ dot 상태 바꾸는 함수 따로 분리
+  function updateDotImages2(swiper3) {
+    const bullets2 = document.querySelectorAll(".newSwiper-pagination .swiper-pagination-bullet");
+    const groupIndex2 = Math.floor(swiper3.activeIndex / swiper3.params.slidesPerGroup);
+
+    bullets2.forEach((bullet, index) => {
+      const img = bullet.querySelector("img");
+      img.src = index === groupIndex2 ? "images/icon/dot1.png" : "images/icon/dot2.png";
+    });
+  }
+
+  // ✅ 슬라이드 변경 시 실행
+  swiper3.on("slideChange", function () {
+    updateDotImages2(swiper3);
+  });
+
+  // ✅ 초기 진입 시 한 번 실행
+  updateDotImages2(swiper3);
+
+  // ✅ 🔥 dot 클릭한 직후에도 강제로 업데이트!
+  document.querySelector(".newSwiper-pagination").addEventListener("click", () => {
+    // Swiper 내부적으로 슬라이드 이동 후 약간의 지연이 있으므로
+    setTimeout(() => updateDotImages2(swiper3), 0);
+  });
+
+  document.querySelectorAll(".newSwiper img").forEach((img) => {
+    img.setAttribute("draggable", "false");
+  });
+  document.querySelectorAll(".newSwiper a").forEach((a) => {
+    // 클릭 막는 건 필요에 따라 유지
+    // a.addEventListener("click", (e) => e.preventDefault());
+
+    a.addEventListener("dragstart", (e) => e.preventDefault()); // 이미지 드래그 방지만 OK
+    // mousedown 막는건 삭제해보세요 (swiper drag 방해 가능)
+    // a.addEventListener("mousedown", (e) => e.preventDefault());
+  });
+
+  // kids_section swiper
+  var swiper4 = new Swiper(".kidsSwiper", {
+      slidesPerView: 2,
+      spaceBetween: 25,
+      centeredSlides: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
