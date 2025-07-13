@@ -483,11 +483,11 @@ nav .util_wrap a .cart {
   width: 325px;
   height: 531px;
   padding: 12px 12px 32px 13px;
-  border: 1px solid #aaa;
+  border: 1px solid #CACDD2;
   border-right: none;
 }
 .new_wrap .newSwiper .swiper-wrapper .swiper-slide:last-child .new_box {
-  border-right: 1px solid #aaa;
+  border-right: 1px solid #CACDD2;
 }
 .new_wrap .newSwiper .swiper-wrapper .swiper-slide .new_box .new_thumb {
   width: 300px;
@@ -556,30 +556,49 @@ nav .util_wrap a .cart {
   cursor: pointer;
 }
 
-/* kids_section */
-.kids_baby_wrap .kids_wrap {
-  width: 625px;
-  background: pink;
+/* kids_baby_section */
+.kids_baby_wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box {
+.kids_baby_wrap .kids_baby_border::after{
+  content: "";
+  /* width: 1px; */
+  border: 1px solid #CACDD2;
+  height: 82%;
+  /* display: block; */
+  position: absolute;
+  bottom: 0;
+}
+.kids_baby_wrap .kids_wrap,
+.baby_wrap {
+  position: relative;
+  width: 625px;
+}
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box {
   width: 300px;
   height: 506px;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_thumb {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_thumb,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_thumb {
   width: 300px;
   height: 400px;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_thumb img {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_thumb img,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_thumb img {
   width: 100%;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap {
   position: relative;
   width: 300px;
   height: 90px;
-  /* background: pink; */
   margin-top: 16px;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .heart::after {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .heart::after,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .heart::after {
   content: "";
   width: 18px;
   height: 16px;
@@ -588,26 +607,31 @@ nav .util_wrap a .cart {
   display: inline-block;
   background: url(../images/icon/love_icon.png) no-repeat center / contain;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .main_desc .sub_detail {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .main_desc .sub_detail,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .main_desc .sub_detail {
   font-size: 1.2rem;
   font-weight: 500;
   color: #73787e;
   margin-bottom: 4px;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .main_desc .item_title {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .main_desc .item_title,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .main_desc .item_title {
   font-size: 1.6rem;
   font-weight: 500;
   color: #1c1d1f;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .side_desc {
   margin-top: 12px;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc .kids_price {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc .kids_price,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .side_desc .baby_price {
   font-size: 1.8rem;
   font-weight: 700;
   /* color: #1c1d1f; */
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc .kids_review_wrap {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc .kids_review_wrap,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .side_desc .baby_review_wrap {
   display: flex;
   align-items: center;
   gap: 3px;
@@ -621,6 +645,15 @@ nav .util_wrap a .cart {
   .kids_desc_wrap
   .side_desc
   .kids_review_wrap
+  .review_star::after,
+.baby_wrap
+  .babySwiper
+  .swiper-wrapper
+  .swiper-slide
+  .baby_box
+  .baby_desc_wrap
+  .side_desc
+  .baby_review_wrap
   .review_star::after {
   content: "";
   width: 13px;
@@ -628,17 +661,32 @@ nav .util_wrap a .cart {
   display: inline-block;
   background: url(../images/icon/review_icon.png) no-repeat center;
 }
-.kids_wrap
-  .kidsSwiper
-  .swiper-wrapper
-  .swiper-slide
-  .kids_box
-  .kids_desc_wrap
-  .side_desc
-  .kids_review_wrap
-  .review_score,
-.review_num {
+.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc .kids_review_wrap,
+.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .side_desc .baby_review_wrap {
   font-size: 1.2rem;
   font-weight: 500;
   color: #9fa4a8;
+}
+
+/* swiper 페이지네이션 dot 이미지 변경하기 */
+.kidsSwiper-pagination {
+  width: 100%;
+  position: absolute;
+  top: -20px !important;
+  right: 0px !important;
+  bottom: auto !important; /* ❗️자동 bottom 제거 */
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  z-index: 10;
+}
+/* 기본 dot 스타일 제거 */
+.kidsSwiper-pagination .swiper-pagination-bullet {
+  background: none !important;
+  width: auto !important;
+  /* height: auto !important; */
+  opacity: 1 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  cursor: pointer;
 }
