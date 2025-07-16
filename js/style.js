@@ -12,6 +12,20 @@ window.onload = function () {
       crossFade: true, // 두 슬라이드가 부드럽게 겹쳐서 전환됨
     },
   });
+  // best_section swiper
+  var bestSwiper = new Swiper(".bestSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 33,
+    loop: false,
+    pagination: {
+      el: ".bestSwiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".bestSwiper-button-next",
+      prevEl: ".bestSwiper-button-prev",
+    },
+  });
   // ustory_section swiper
   var swiper2 = new Swiper(".ustorySwiper", {
     slidesPerView: 3, // 한 화면에 3개
@@ -179,10 +193,49 @@ window.onload = function () {
   var swiper5 = new Swiper(".babySwiper", {
     slidesPerView: 2,
     spaceBetween: 25,
+    slidesPerGroup: 2, // 클릭, 터치 시 2개씩 넘어감
     centeredSlides: false,
     pagination: {
-      el: ".swiper-pagination",
+      el: document.querySelector(".babySwiper").closest(".babySwiper_wrapper").querySelector(".babySwiper-pagination"),
       clickable: true,
+      renderBullet: function (index, className) {
+        // dot 3개만 만들기
+        if (index > 2) return ""; // index: 0,1,2까지만
+        return `<span class="${className}">
+          <img src="images/icon/dot2.png" alt="dot${index + 1}" />
+          </span>`;
+      },
     },
+  });
+
+  // ✅ dot 상태 바꾸는 함수 따로 분리
+  function updateDotImages4(swiper5) {
+    const bullets4 = document.querySelectorAll(".babySwiper-pagination .swiper-pagination-bullet");
+    const groupIndex4 = Math.floor(swiper5.activeIndex / swiper5.params.slidesPerGroup);
+
+    bullets4.forEach((bullet, index) => {
+      const img = bullet.querySelector("img");
+      if (img) {
+        img.src = index === groupIndex4 ? "images/icon/dot1.png" : "images/icon/dot2.png";
+      }
+    });
+  }
+
+  // ✅ 슬라이드 변경 시 실행
+  swiper5.on("slideChange", function () {
+    updateDotImages4(swiper5);
+  });
+
+  // ✅ 초기 진입 시 한 번 실행
+  updateDotImages4(swiper5);
+
+  // ✅ 🔥 dot 클릭한 직후에도 강제로 업데이트!
+  document.querySelector(".babySwiper-pagination").addEventListener("click", () => {
+    // Swiper 내부적으로 슬라이드 이동 후 약간의 지연이 있으므로
+    setTimeout(() => updateDotImages4(swiper5), 0);
+  });
+
+  document.querySelectorAll(".babySwiper img").forEach((img) => {
+    img.setAttribute("draggable", "false");
   });
 };
