@@ -13,6 +13,7 @@ li {
 a {
   display: block;
   color: #333;
+  cursor: pointer;
   text-decoration: none;
 }
 html,
@@ -116,7 +117,7 @@ nav .gnb li .women_depth2 {
 nav .gnb li .men_depth2 {
   position: absolute;
   top: 56px;
-  left: 110px;
+  left: 112px;
 }
 nav .gnb li .kids_depth2 {
   position: absolute;
@@ -126,7 +127,7 @@ nav .gnb li .kids_depth2 {
 nav .gnb li .baby_depth2 {
   position: absolute;
   top: 56px;
-  left: 250px;
+  left: 255px;
 }
 nav .gnb li .depth2 li {
   line-height: 2.5;
@@ -278,9 +279,6 @@ nav .util_wrap a .cart {
   object-fit: cover;
 }
 /* best_section */
-.best_wrap {
-  /* margin-top: 90px; */
-}
 .section_title {
   font-size: 2.8rem;
   font-weight: 500;
@@ -300,8 +298,86 @@ nav .util_wrap a .cart {
   width: 100%;
   overflow: hidden;
 }
-.best_wrap .bestSwiper .swiper-slide {
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide {
   width: 100%;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 33px;
+  row-gap: 55px;
+  margin-top: 20px;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box {
+  width: 300px;
+  height: 506px;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box .best_desc_wrap {
+  position: relative;
+  width: 300px;
+  height: 90px;
+  margin-top: 16px;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box .best_desc_wrap .heart::after {
+  content: "";
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  background: url(../images/icon/love_icon.png) no-repeat center / contain;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box .best_desc_wrap .main_desc .sub_detail {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #73787e;
+  margin-bottom: 4px;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box .best_desc_wrap .main_desc .item_title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1c1d1f;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box .best_desc_wrap .side_desc {
+  margin-top: 12px;
+}
+.best_wrap .bestSwiper .swiper-wrapper .swiper-slide .best_section .best_box .best_desc_wrap .side_desc .best_price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1c1d1f;
+}
+.best_wrap
+  .bestSwiper
+  .swiper-wrapper
+  .swiper-slide
+  .best_section
+  .best_box
+  .best_desc_wrap
+  .side_desc
+  .best_review_wrap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #9fa4a8;
+}
+.best_wrap
+  .bestSwiper
+  .swiper-wrapper
+  .swiper-slide
+  .best_section
+  .best_box
+  .best_desc_wrap
+  .side_desc
+  .best_review_wrap
+  .review_star::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: url(../images/icon/review_icon.png) no-repeat center;
 }
 .bestSwiper-pagination {
   text-align: center;
@@ -361,87 +437,7 @@ nav .util_wrap a .cart {
   color: #1c1d1f;
   font-weight: 600;
 }
-.best_wrap .best_container {
-  width: 100%;
-  height: 1086px;
-  margin-top: 20px;
-  /* background: rgb(239, 205, 205); */
-}
-.best_wrap .best_container .best_section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 33px;
-}
-.best_wrap .best_container .best_section_bottom {
-  margin-top: 55px;
-}
-.best_wrap .best_container .best_section .best_box {
-  width: 300px;
-  height: 506px;
-  display: block;
-  /* border: 1px solid; */
-}
-.best_wrap .best_container .best_section .best_box .best_thumb {
-  width: 300px;
-  height: 400px;
-}
-.best_wrap .best_container .best_section .best_box .best_thumb a img {
-  width: 100%;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap {
-  position: relative;
-  width: 300px;
-  height: 90px;
-  /* background: pink; */
-  margin-top: 16px;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .heart::after {
-  content: "";
-  width: 18px;
-  height: 16px;
-  position: absolute;
-  right: 0;
-  display: inline-block;
-  background: url(../images/icon/love_icon.png) no-repeat center / contain;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .main_desc .sub_detail {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #73787e;
-  margin-bottom: 4px;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .main_desc .item_title {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #1c1d1f;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc {
-  margin-top: 12px;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_price {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #1c1d1f;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_review_wrap {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  margin-top: 5px;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_review_wrap .review_star::after {
-  content: "";
-  width: 13px;
-  height: 13px;
-  display: inline-block;
-  background: url(../images/icon/review_icon.png) no-repeat center;
-}
-.best_wrap .best_container .best_section .best_box .best_desc_wrap .side_desc .best_review_wrap .best_review_score,
-.best_review_num {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #9fa4a8;
-}
+
 /* uniqlo story_section */
 .ustorySwiper_wrapper {
   position: relative; /* dot 위치 조절용 */
@@ -739,6 +735,9 @@ nav .util_wrap a .cart {
   align-items: center;
   gap: 3px;
   margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #9fa4a8;
 }
 .kids_wrap
   .kidsSwiper
@@ -764,13 +763,6 @@ nav .util_wrap a .cart {
   display: inline-block;
   background: url(../images/icon/review_icon.png) no-repeat center;
 }
-.kids_wrap .kidsSwiper .swiper-wrapper .swiper-slide .kids_box .kids_desc_wrap .side_desc .kids_review_wrap,
-.baby_wrap .babySwiper .swiper-wrapper .swiper-slide .baby_box .baby_desc_wrap .side_desc .baby_review_wrap {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #9fa4a8;
-}
-
 /* swiper 페이지네이션 dot 이미지 변경하기 */
 .kidsSwiper-pagination {
   width: 100%;

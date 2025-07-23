@@ -14,7 +14,7 @@ window.onload = function () {
   });
   // best_section swiper
   var bestSwiper = new Swiper(".bestSwiper", {
-    slidesPerView: 1,
+    slidesPerView: 1, // 한 줄에 4개
     spaceBetween: 33,
     loop: false,
     pagination: {
