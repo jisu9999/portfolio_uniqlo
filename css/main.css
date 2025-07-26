@@ -24,6 +24,30 @@ body {
   font-family: "Pretendard", sans-serif;
   font-size: 10px;
 }
+/* "Top" 버튼 스타일 */
+.go-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.go-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* 전체 레이아웃 */
 .wrap {
   width: 100%;
@@ -477,11 +501,15 @@ nav .util_wrap a .cart {
   touch-action: pan-y; /* 수직 스크롤만 허용, 가로 드래그는 swiper가 처리 */
   -webkit-user-select: none; /* 드래그 시 텍스트 선택 방지 */
   user-select: none;
+  width: 100%;
+  max-width: 100%;
 }
 
 .ustorySwiper .swiper-wrapper .swiper-slide {
   /* width: 410px; */
   height: 468px;
+  flex-shrink: 0;
+  width: auto;
 }
 .ustorySwiper .swiper-wrapper .swiper-slide .ustory_thumb img {
   display: block;

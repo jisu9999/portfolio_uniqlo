@@ -1,15 +1,10 @@
 @charset "utf-8";
 @media (max-width: 1300px) {
   .inner {
-    width: 967px !important;
+    width: 80% !important;
     background: pink;
   }
   .best_section {
-    grid-template-columns: repeat(3, 1fr) !important;
+    /* grid-template-columns: repeat(3, 1fr) !important; */
   }
 }
-/* @media (max-width: 1024px) {
-  .best_section {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-} */

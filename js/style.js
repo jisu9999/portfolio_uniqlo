@@ -1,4 +1,21 @@
-window.onload = function () {
+window.addEventListener("DOMContentLoaded", function () {
+  const goTopBtn = document.getElementById("goTopBtn");
+  console.log(goTopBtn);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      goTopBtn.classList.add("show");
+    } else {
+      goTopBtn.classList.remove("show");
+    }
+  });
+
+  goTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   // main_visual swiper
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -15,6 +32,7 @@ window.onload = function () {
   // best_section swiper
   var bestSwiper = new Swiper(".bestSwiper", {
     slidesPerView: 1, // 한 줄에 4개
+    // slidesPerGroup: 1,
     spaceBetween: 33,
     loop: false,
     pagination: {
@@ -28,8 +46,8 @@ window.onload = function () {
   });
   // ustory_section swiper
   var swiper2 = new Swiper(".ustorySwiper", {
-    slidesPerView: 3, // 한 화면에 3개
-    slidesPerGroup: 3, // 클릭, 터치 시 3개씩 넘어감
+    slidesPerView: 2, // 한 화면에 3개
+    slidesPerGroup: 2, // 클릭, 터치 시 3개씩 넘어감
     spaceBetween: 35,
     loop: false,
     simulateTouch: true, // 드래그 허용 (기본 true지만 명시 추천)
@@ -43,6 +61,20 @@ window.onload = function () {
         return `<span class="${className}">
         <img src="images/icon/dot2.png" alt="dot${index + 1}" />
         </span>`;
+      },
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1024: {
+        slidesPerView: 2.5,
+        slidesPerGroup: 2,
+      },
+      1300: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
       },
     },
   });
@@ -238,4 +270,4 @@ window.onload = function () {
   document.querySelectorAll(".babySwiper img").forEach((img) => {
     img.setAttribute("draggable", "false");
   });
-};
+});
