@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
   const goTopBtn = document.getElementById("goTopBtn");
-  console.log(goTopBtn);
+
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
       goTopBtn.classList.add("show");
@@ -31,22 +31,60 @@ window.addEventListener("DOMContentLoaded", function () {
   });
   // best_section swiper
   var bestSwiper = new Swiper(".bestSwiper", {
-    slidesPerView: 1, // 한 줄에 4개
-    // slidesPerGroup: 1,
+    slidesPerView: 4, // 한 줄에 4개
+    slidesPerGroup: 4,
     spaceBetween: 33,
     loop: false,
     pagination: {
       el: ".bestSwiper-pagination",
-      type: "fraction",
+      clickable: true, // dot 클릭으로 이동 가능
+      renderBullet: function (index, className) {
+        // dot 2개만 만들기
+        if (index > 1) return ""; // index: 0,1까지만
+        return `<span class="${className}">
+        <img src="images/icon/dot2.png" alt="dot${index + 1}" />
+        </span>`;
+      },
     },
-    navigation: {
-      nextEl: ".bestSwiper-button-next",
-      prevEl: ".bestSwiper-button-prev",
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 2,
+      },
+      1300: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
     },
   });
+
+  // ✅ dot 상태 바꾸는 함수 따로 분리
+  function best_updateDotImages(bestSwiper) {
+    const best_bullets = document.querySelectorAll(".bestSwiper-pagination .swiper-pagination-bullet");
+    const best_groupIndex = Math.floor(bestSwiper.activeIndex / bestSwiper.params.slidesPerGroup);
+
+    best_bullets.forEach((bullet, index) => {
+      const img = bullet.querySelector("img");
+      img.src = index === best_groupIndex ? "images/icon/dot1.png" : "images/icon/dot2.png";
+    });
+  }
+
+  // ✅ 슬라이드 변경 시 실행
+  bestSwiper.on("slideChange", function () {
+    best_updateDotImages(bestSwiper);
+  });
+
+  // ✅ 초기 진입 시 한 번 실행
+  best_updateDotImages(bestSwiper);
+
+  
   // ustory_section swiper
   var swiper2 = new Swiper(".ustorySwiper", {
-    slidesPerView: 2, // 한 화면에 3개
+    slidesPerView: 2, // 한 화면에 2개
     slidesPerGroup: 2, // 클릭, 터치 시 3개씩 넘어감
     spaceBetween: 35,
     loop: false,

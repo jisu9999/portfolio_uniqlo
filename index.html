@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/style.js"></script>
+    <script src="/js/style.js" defer></script>
     <!-- favicon -->
     <link rel="icon" href="images/icon/uniqlo_favicon.png" />
     <title>uniqlo 유니클로</title>
@@ -227,7 +227,7 @@
       </div>
       <div class="inner">
         <!-- best_section -->
-        <div class="best_wrap">
+        <div class="best_wrap" style="position: relative;">
           <h2 class="section_title">BEST</h2>
           <ul class="best_category">
             <li><a href="#;">전체</a></li>
@@ -236,378 +236,191 @@
             <li><a href="#;">키즈</a></li>
             <li><a href="#;">베이비</a></li>
           </ul>
-          <div class="bestSwiper swiper">
+          <div class="swiper bestSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="best_section">
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best01.png" alt="best01 썸네일" /></a>
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best01.png" alt="best01 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Genderless, XS-4XL, 리사이클 소재</p>
+                      <p class="item_title">AIRism 코튼로버사이즈크루넥T(5부)</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Genderless, XS-4XL, 리사이클 소재</p>
-                          <p class="item_title">AIRism 코튼로버사이즈크루넥T(5부)</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">19,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(31)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">19,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.8</span>
+                        <span class="best_review_num">(31)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best02.png" alt="best02 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Genderless, XS-4XL</p>
-                          <p class="item_title">스웨트와이드쇼트팬츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">39,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.9</span>
-                            <span class="best_review_num">(138)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best03.png" alt="best03 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Women, XS-3XL</p>
-                          <p class="item_title">리넨코튼쇼트팬츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">39,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.6</span>
-                            <span class="best_review_num">(48)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best04.png" alt="best04 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Women, XS-4XL</p>
-                          <p class="item_title">AIRism 브라캐미솔</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">29,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.7</span>
-                            <span class="best_review_num">(226)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best05.png" alt="best05 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Kids, 100-160, 일부매장제품</p>
-                          <p class="item_title">GIRLS 데님쇼트팬츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">19,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(31)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best06.png" alt="best06 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Genderless, XS-XXL</p>
-                          <p class="item_title">와이드핏카고팬츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">49,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(99)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best07.png" alt="best07 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Baby, 70-90, 일부매장제품</p>
-                          <p class="item_title">
-                            BN Joy Of Print 코튼메쉬이너바디수트
-                            <br />
-                            (슬리브리스)
-                          </p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">39,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.6</span>
-                            <span class="best_review_num">(48)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best08.png" alt="best08 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Women, XS-4XL</p>
-                          <p class="item_title">AIRism 브라캐미솔</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">29,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.7</span>
-                            <span class="best_review_num">(226)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="best_section">
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best09.png" alt="best09 썸네일" /></a>
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best02.png" alt="best02 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Genderless, XS-4XL</p>
+                      <p class="item_title">스웨트와이드쇼트팬츠</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Unisex, S-XL</p>
-                          <p class="item_title">데님워크쇼트팬츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">39,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(71)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">39,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.9</span>
+                        <span class="best_review_num">(138)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best10.png" alt="best10 썸네일" /></a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best03.png" alt="best03 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Women, XS-3XL</p>
+                      <p class="item_title">리넨코튼쇼트팬츠</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Women, XS-XL</p>
-                          <p class="item_title">미니T(반팔)래글런</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">14,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.6</span>
-                            <span class="best_review_num">(55)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">39,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.6</span>
+                        <span class="best_review_num">(48)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best11.png" alt="best11 썸네일" /></a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best04.png" alt="best04 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Women, XS-4XL</p>
+                      <p class="item_title">AIRism 브라캐미솔</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Kids, 110-160, 일부매장제품</p>
-                          <p class="item_title">KIDS 페인터이지하프팬츠(데님)</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">19,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.9</span>
-                            <span class="best_review_num">(50)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">29,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.7</span>
+                        <span class="best_review_num">(226)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best12.png" alt="best12 썸네일" /></a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best05.png" alt="best05 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Kids, 100-160, 일부매장제품</p>
+                      <p class="item_title">GIRLS 데님쇼트팬츠</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Men, S-4XL</p>
-                          <p class="item_title">포켓터블UV PROTECTION파카</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">49,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(286)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">19,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.8</span>
+                        <span class="best_review_num">(31)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best13.png" alt="best13 썸네일" /></a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best06.png" alt="best06 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Genderless, XS-XXL</p>
+                      <p class="item_title">와이드핏카고팬츠</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Women, XS-3XL</p>
-                          <p class="item_title">립브라탑(스트라이프)</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">29,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(58)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">49,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.8</span>
+                        <span class="best_review_num">(99)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best14.png" alt="best14  썸네일" /></a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best07.png" alt="best07 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Baby, 70-90, 일부매장제품</p>
+                      <p class="item_title">
+                        BN Joy Of Print 코튼메쉬이너바디수트
+                        <br />
+                        (슬리브리스)
+                      </p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Men, XS-4XL</p>
-                          <p class="item_title">AIRism 메쉬V넥T(반팔)</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">14,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(464)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">39,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.6</span>
+                        <span class="best_review_num">(48)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best15.png" alt="best15 썸네일" /></a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#;" class="best_box">
+                  <div class="best_thumb">
+                    <img src="images/best/best08.png" alt="best08 썸네일" />
+                  </div>
+                  <div class="best_desc_wrap">
+                    <div class="heart"></div>
+                    <div class="main_desc">
+                      <p class="sub_detail">Women, XS-4XL</p>
+                      <p class="item_title">AIRism 브라캐미솔</p>
                     </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Kids, 110-160, 일부매장제품</p>
-                          <p class="item_title">GIRLS 티어드미니스코츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">19,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.9</span>
-                            <span class="best_review_num">(32)</span>
-                          </div>
-                        </div>
-                      </a>
+                    <div class="side_desc">
+                      <span class="best_price">29,900원</span>
+                      <div class="best_review_wrap">
+                        <span><i class="review_star"></i></span>
+                        <span class="best_review_score">4.7</span>
+                        <span class="best_review_num">(226)</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="best_box">
-                    <div class="best_thumb">
-                      <a href="#;"><img src="images/best/best16.png" alt="best16 썸네일" /></a>
-                    </div>
-                    <div class="best_desc_wrap">
-                      <div class="heart"></div>
-                      <a href="#;">
-                        <div class="main_desc">
-                          <p class="sub_detail">Unisex, XS-4XL, 리사이클 소재</p>
-                          <p class="item_title">울트라스트레치액티브쇼트팬츠</p>
-                        </div>
-                        <div class="side_desc">
-                          <span class="best_price">29,900원</span>
-                          <div class="best_review_wrap">
-                            <span><i class="review_star"></i></span>
-                            <span class="best_review_score">4.8</span>
-                            <span class="best_review_num">(54)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
-            <div class="bestSwiper-pagination"></div>
-            <!-- 🔽 좌우 네비 버튼 -->
-            <div class="bestSwiper-button-prev">←</div>
-            <div class="bestSwiper-button-next">→</div>
           </div>
+          <div class="bestSwiper-pagination"></div>
         </div>
         <!-- uniqlo story -->
         <div class="ustorySwiper_wrapper" style="position: relative">
