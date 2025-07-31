@@ -30,7 +30,7 @@ body {
   right: 30px;
   width: 50px;
   height: 50px;
-  font-size: 24px;
+  font-size: 2.4rem;
   background: #27282c;
   color: #fff;
   border: none;
@@ -52,10 +52,10 @@ body {
   width: 100%;
 }
 .inner {
-  width: 75%;
+  width: 80%;
   max-width: 1300px;
   margin: 0 auto;
-  background: rgb(255, 222, 227);
+  /* background: rgb(255, 222, 227); */
 }
 /* 헤더 */
 .header_top {
@@ -332,7 +332,7 @@ nav .util_wrap a .cart {
   border-radius: 0 !important;
   cursor: pointer;
 }
-.best_wrap{
+.best_wrap {
   width: 100%;
 }
 .best_wrap .best_category {
@@ -350,7 +350,7 @@ nav .util_wrap a .cart {
 
   margin-top: 20px;
 }
-.best_wrap .bestSwiper .swiper-wrapper{
+.best_wrap .bestSwiper .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -358,6 +358,20 @@ nav .util_wrap a .cart {
 .best_wrap .bestSwiper .best_box {
   width: 300px;
   height: 506px;
+}
+.rank_num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: center;
+  background: #27282c;
 }
 .best_wrap .bestSwiper .best_box .best_desc_wrap {
   position: relative;
