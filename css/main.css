@@ -333,7 +333,7 @@ nav .util_wrap a .cart {
   cursor: pointer;
 }
 .best_wrap {
-  width: 100%;
+  /* width: 100%; */
 }
 .best_wrap .best_category {
   display: flex;

@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
+  // go-top버튼
   const goTopBtn = document.getElementById("goTopBtn");
 
   window.addEventListener("scroll", () => {
